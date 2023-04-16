@@ -214,7 +214,7 @@ p+.form-control{
    margin: 0 6px;
 }
 .close:hover, .close:focus {
-   box-shadow: inset -200px 0 0 0 var(--hover), inset 200px 0 0 0 var(--hover);
+   box-shadow: inset -250px 0 0 0 var(--hover), inset 250px 0 0 0 var(--hover);
    color: #fff;
 }
 .up:hover, .up:focus {
