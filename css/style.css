@@ -799,7 +799,7 @@ header .carousel-caption p{
 .sendMail input{
    padding: 0 .8rem ;
    background-color: transparent;
-   flex-grow: 1;
+   /* flex-grow: 1; */
 
 }
 
