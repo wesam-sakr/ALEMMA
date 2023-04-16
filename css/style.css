@@ -317,7 +317,7 @@ section{
    color: #fff !important;
    position: relative;
 }
-.navbar a::after{
+.navbar .navbar-collapse a::after{
    content: "";
    position: absolute;
    bottom: 0;
