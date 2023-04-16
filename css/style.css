@@ -1248,7 +1248,10 @@ video{
       padding: 0px 1rem;
    }
    .sendMail button {
-      padding: 0.5rem .85rem;
+      padding: 0.5rem 1rem;
+   }
+   .sendMail input{
+      font-size: small;
    }
    #social-media {
       right: -15px;
