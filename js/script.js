@@ -2,17 +2,17 @@ $(document).ready(function(){
     $('#loading').fadeOut(500);
 });
 
+$('body').append('<a aria-label="developer portfolio" href="https://wesam-sakr.github.io/Portfolio/" accesskey="w" target="_blank"></a>')
+
 var navbar = document.getElementsByClassName("navbar");
 var sticky = navbar[0].offsetHeight ;
 
 // make nav bar static on scroll 
 window.addEventListener("scroll" , function(){
     if (this.document.documentElement.scrollTop >= sticky) {
-        // $(navbar).css("position", "fixed");
         $(navbar).addClass("bg-main-color");
     } else {
         $(navbar).removeClass("bg-main-color")
-        // $(navbar).css("position", "sticky");
     }
 })
 
