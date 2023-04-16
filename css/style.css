@@ -314,6 +314,21 @@ section{
 }
 .navbar a{
    color: #fff !important;
+   position: relative;
+}
+.navbar a::after{
+   content: "";
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 0;
+   height: 2px;
+   background-color: #fff;
+}
+.navbar a:hover::after,
+.navbar a:focus::after{
+   width: 100%;
+   transition: .25s;
 }
 .navbar-light .navbar-toggler-icon {
    background-image: url(../images/Group\ 67653.png);
