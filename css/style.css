@@ -327,9 +327,12 @@ section{
    background-color: #fff;
 }
 .navbar a:hover::after,
-.navbar a:focus::after{
+.navbar a.active::after{
    width: 100%;
    transition: .25s;
+}
+.navbar a.active{
+   font-weight: bold;
 }
 .navbar-light .navbar-toggler-icon {
    background-image: url(../images/Group\ 67653.png);
@@ -358,6 +361,40 @@ section{
 .navbar .alemaa-btn:hover .text i{
    background: #fff;
    color: var(--main-color) !important
+}
+.g-head {
+   margin-bottom: 70px;
+   position: relative;
+   text-align: center;
+}
+.g-head h3 {
+   color: #434343;
+   position: relative;
+}
+
+.g-head h3:before {
+   content: attr(data-place);
+   position: absolute;
+   left: 0;
+   top: 0px;
+   color: rgb(132 132 132 / 5%);
+   font-size: 50px;
+   line-height: 0;
+   width: 100%;
+   text-align: center;
+   z-index: -1;
+}
+
+.g-head:before {
+   content: '';
+   position: absolute;
+   left: 50%;
+   bottom: -8px;
+   transform: translatex(-50%);
+   width: 50px;
+   height: 4px;
+   background-color: #B59D64;
+   border-radius: 50px;
 }
 
 /* ----------------- home page ----------------- */
@@ -427,11 +464,27 @@ header .carousel-caption p{
    width: 3rem;
    height: 3rem;
 }
+.callAction{
+   display: inline-block;
+   color: #fff !important;
+   border: 1px solid #fff;
+   padding: .2rem 2rem;
+   border-radius: 20px;
+   line-height: initial;
+   transition: .5s;
+   font-size: 14px;
+   margin-top: 10px;
+}
+.callAction:hover{
+   background-color: #B59D64;
+   border-color: #B59D64;
+}
+
 
 /* features section */
 .features{
-   height: 600px;
    position: relative;
+   padding-top: 100px;
 }
 .feature{
    position: relative;
@@ -494,8 +547,8 @@ header .carousel-caption p{
    width: 20px;
    height: 20px;
    background: #B59D64;
-   animation: animate 25s linear infinite;
-   bottom: -600px;
+   animation: animate 20s linear infinite;
+   bottom: -300px;
    
 }
 .features .circles li:nth-child(1){
@@ -522,7 +575,7 @@ header .carousel-caption p{
    width: 60px;
    height: 60px;
    animation-delay: 0s;
-   animation-duration: 18s;
+   animation-duration: 10s;
 }
 .features .circles li:nth-child(5){
    right: 65%;
@@ -547,14 +600,14 @@ header .carousel-caption p{
    width: 25px;
    height: 25px;
    animation-delay: 15s;
-   animation-duration: 45s;
+   animation-duration: 40s;
 }
 .features .circles li:nth-child(9){
    right: 20%;
    width: 15px;
    height: 15px;
    animation-delay: 2s;
-   animation-duration: 35s;
+   animation-duration: 30s;
 }
 .features .circles li:nth-child(10){
    right: 85%;
@@ -580,7 +633,7 @@ header .carousel-caption p{
 }
 
 /* why-us */
-.alemaa img{
+.alemaa img.cert{
    height: 600px;
    object-fit: contain;
 }
@@ -593,6 +646,27 @@ header .carousel-caption p{
    margin: .5rem 0;
 }
  
+.gallery-container {
+   display: grid;
+   grid-template-columns: 6fr 6fr;
+   grid-template-areas:
+       'item1 item2'
+       'item3 item3';
+   gap: 15px;
+}
+.gallery-container .item:nth-child(1) {
+   grid-area: item1;
+}
+.gallery-container .item:nth-child(3) {
+   grid-area: item3;
+}
+.gallery-container .item img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 50px 10px;
+   filter: brightness(.7);
+}
 /* ------ about section ------ */
 .about ol {
    counter-reset: list;
@@ -618,7 +692,7 @@ header .carousel-caption p{
 .counters{
    background-color: #F3F2F2;
 }
-.counters img{
+.counters .d-count img{
    width: 50px;
 }
 .d-count:not(:last-child){
@@ -1234,9 +1308,9 @@ video{
    .navbar a {
       font-size: inherit;
    }
-   .features {
+   /* .features {
       height: 400px;
-   }
+   } */
    .feature img {
       filter: brightness(.65);
       width: 100%;
@@ -1244,6 +1318,9 @@ video{
    }
    .feature-content .ln{
       display: none;
+   }
+   .gallery-container .item img {
+      height: 175px;
    }
    .contcatUs-wrapper .contact-form {
       padding-left: 0rem;
