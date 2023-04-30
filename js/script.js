@@ -84,13 +84,15 @@ window.addEventListener("scroll" , function(){
         
 })
 
-$('.video .owl-carousel').owlCarousel({
-    loop:true,
-    margin:20,
-    nav:false,
-    responsiveClass:true,
-    rtl:true,
-    autoplay:false,
+$('.video-slider .owl-carousel').owlCarousel({
+    nav: true,
+    dots: false,
+    loop: false,
+    autoplay: false,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    margin: 20,
+    rtl: true,
     responsive:{
         0:{
             items:2
@@ -104,7 +106,8 @@ $('.video .owl-carousel').owlCarousel({
     }
 });
 $(".project-wrapper .items-container.owl-carousel").owlCarousel({
-    nav: false,
+    nav: true,
+    dots: false,
     loop: false,
     autoplay: false,
     autoplayHoverPause: true,
