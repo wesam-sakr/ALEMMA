@@ -686,8 +686,7 @@ header .carousel-caption p{
    width: 100%;
    height: 250px;
    object-fit: cover;
-   border-radius: 50px 10px;
-   filter: brightness(.7);
+   border-radius: 10px;
 }
 /* ------ about section ------ */
 .about ol {
@@ -712,12 +711,11 @@ header .carousel-caption p{
 
 .about .about-images-container img{
    width: 100%;
-   border-radius: 50px 10px;
-   background-color: var(--main-color);
+   border-radius: 10px;
    padding: .1rem;
-   border:1px solid var(--main-color) ;
    height: 250px;
    margin: 10px;
+   object-fit: cover;
 }
 
 
@@ -796,12 +794,18 @@ header .carousel-caption p{
  .gridtable .table-striped>tbody>tr:nth-of-type(odd) {
     --bs-table-accent-bg: #fff9e978;
  }
- .project-wrapper,.video{
+ .project-wrapper,.video,.gallery{
    position: relative;
  }
  .project-wrapper .item .card {
    border-radius: 15px;
    overflow: hidden;
+}
+.project-wrapper .owl-carousel .owl-item img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
 }
 .project-wrapper .items-container {
    flex-wrap: nowrap;
@@ -843,23 +847,17 @@ header .carousel-caption p{
 
 /* ------ gallery section ------  */
 
-.gallery{
-   background: url(../images/gallery-bg.svg);
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: top left;
-   padding: 3rem 0;
-}
-.gallery .photo a {
+.gallery a {
    display: block;
    border-radius: 10px;
    overflow: hidden;
    cursor: pointer;
 }
-.gallery .photo img {
+.gallery .gallery-slider img {
    transition: .4s;
    height: 215px;
    object-fit: cover;
+   border-radius: 10px;
 }
 
 /* ------ video sections ------ */
@@ -992,14 +990,14 @@ header .carousel-caption p{
    border-radius: 50%;
    border: dotted .5px var(--main-color);
 }
-.contcatUs-wrapper{
+.contactUs-wrapper{
    margin-bottom: 3rem;
 }
-.contcatUs-wrapper .contact-form{
+.contactUs-wrapper .contact-form{
    padding-left: 4rem;
    position: relative;
 }
-.contcatUs-wrapper .contact-form::after{
+.contactUs-wrapper .contact-form::after{
    content: "";
    height: 80%;
    width: 1px;
@@ -1184,8 +1182,10 @@ footer .social div:hover i{
 /* -----------------  videos page ----------------- */
 video {
    width: 100%;
+   height: 100%;
    max-height: 250px;
    object-fit: none;
+   border-radius: 15px;
 }
 .video-wrap{
    position: relative;
@@ -1359,10 +1359,10 @@ video {
    .gallery-container .item img {
       height: 175px;
    }
-   .contcatUs-wrapper .contact-form {
+   .contactUs-wrapper .contact-form {
       padding-left: 0rem;
    }
-   .contcatUs-wrapper .contact-form::after {
+   .contactUs-wrapper .contact-form::after {
       content: none;
    }
    .project-wrapper .card li{
